@@ -8,6 +8,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
@@ -20,6 +21,7 @@ public class RestClient {
 	public static void main(String[] args) {
 
 		RestTemplate restTemplate = new RestTemplate();
+		restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 
 		MultiValueMap<String, String> params= new LinkedMultiValueMap<String, String>();
 		params.add("page", "1");
@@ -36,7 +38,7 @@ public class RestClient {
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
-		headers.add("Authorization", "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+		headers.add("Authorization", "Bearer b5fc4204e777d8a78b57d7c66bf8008595641124");
 
 		RequestEntity<?> req = new RequestEntity<>(headers, HttpMethod.GET, queryURI);
 
