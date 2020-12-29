@@ -38,7 +38,7 @@ public class RestClient {
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
-		headers.add("Authorization", "Bearer xxxxxxxxxx");
+		headers.add("Authorization", "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
 		RequestEntity<?> req = new RequestEntity<>(headers, HttpMethod.GET, queryURI);
 

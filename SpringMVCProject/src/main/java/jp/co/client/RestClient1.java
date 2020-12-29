@@ -16,7 +16,7 @@ public class RestClient1 {
 		RestTemplate restTemplate = new RestTemplate();
 
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Authorization", "Bearer xxxxxxxxxx");
+		headers.add("Authorization", "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
 
